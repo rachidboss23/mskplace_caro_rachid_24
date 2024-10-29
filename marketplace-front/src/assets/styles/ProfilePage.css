@@ -1,0 +1,115 @@
+/* src/assets/styles/ProfilePage.css */
+
+.profile-background {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center;     /* Centra el contenido verticalmente */
+  min-height: 100vh;       /* Asegura que cubra toda la altura del viewport */
+}
+
+.profile-container {
+  background-color: white; /* Fondo blanco para el recuadro de información */
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para resaltar el contenido sobre el fondo */
+  border-radius: 10px; /* Redondeamos los bordes */
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+}
+
+.profile-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #e9ecef;
+}
+
+.profile-info h2 {
+  font-size: 24px;
+}
+
+.role-toggle {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.role-badge {
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.role-badge.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.stat-item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.courses-section {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.course-item {
+  background-color: #73e3dc;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.messages-section {
+  width: 100%;
+}
+
+.messages-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.messages-section li {
+  margin-bottom: 10px;
+}
+
+.view-more {
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+  color: rgb(199, 207, 207);
+  text-decoration: none;
+}
+
+.view-more:hover {
+  text-decoration: underline;
+}

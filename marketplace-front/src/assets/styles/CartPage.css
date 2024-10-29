@@ -1,0 +1,35 @@
+/* src/assets/styles/CartPage.css */
+
+.container {
+  min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.musaika-logo {
+  width: 150px;
+  margin-top: 20px;
+}
+
+.line-simulator {
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.footer {
+  margin-top: 20px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
