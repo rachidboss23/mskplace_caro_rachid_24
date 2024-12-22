@@ -1,6 +1,8 @@
 # 🎓 Musaikaplace - Marketplace de Cursos en Línea
 
-Este es el proyecto final de mi carrera de Full Stack JavaScript. Musaikaplace es una plataforma diseñada para que profesores y expertos puedan ofrecer cursos en línea. El proyecto reúne todo lo aprendido durante mi formación y está disponible en producción a través de [Render](https://mskplace-caro-rachid-24-1.onrender.com/).
+Este es el proyecto final de mi carrera de Full Stack JavaScript. Musaikaplace es una plataforma diseñada para que profesores y expertos puedan ofrecer cursos en línea. El proyecto reúne todo lo aprendido durante mi formación y está disponible en producción a través de [Render] 
+
+https://mskplace-caro-rachid-24-1.onrender.com/
 
 ---
 
