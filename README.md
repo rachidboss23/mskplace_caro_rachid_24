@@ -114,7 +114,9 @@ src/ ├── modelos/ # Esquemas y modelos de datos (Sequelize con PostgreSQL)
 
 ## 📧 **Contacto**
 Si tienes preguntas o sugerencias, no dudes en contactarnos:  
+
 **Nombre de integrantes del proyecto :** 
+
 [Rachid Boss Ibarra ]  **LinkedIn:**   https://www.linkedin.com/in/rachid-boss-ibarra/  
 
 [Carolina Torrejón Nuñez ]  **LinkedIn:**  https://www.linkedin.com/in/carolina-torrej%C3%B3n-n%C3%BA%C3%B1ez/
