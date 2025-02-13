@@ -126,6 +126,6 @@ Si tienes preguntas o sugerencias, no dudes en contactarnos:
 
 ---
 
-¡Espero que disfrutes explorando este proyecto tanto como yo disfruté desarrollarlo! 🚀
+¡Espero que disfrutes explorando este proyecto tanto como nosotros disfrutamos desarrollarlo! 🚀
 
 
