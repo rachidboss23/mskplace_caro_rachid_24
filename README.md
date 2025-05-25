@@ -18,14 +18,14 @@ Musaikaplace permite a los usuarios registrarse como estudiantes o profesores, p
 - **React.js**: Framework principal para la interfaz.
 - **CSS Modules** y **Bootstrap**: Para el diseño y la responsividad.
 - **Context API**: Gestión del estado global.
-- **Axios**: Comunicación con el Backend.
+
 
 ### **Backend**
 - **Node.js**: Plataforma para la lógica del servidor.
 - **Express.js**: Framework para construir la API REST.
 - **PostgreSQL**: Base de datos relacional con **pgAdmin 4** como herramienta de gestión.
 - **JWT (JSON Web Tokens)**: Manejo de autenticación y autorización.
-- **Sequelize**: ORM para modelar datos en PostgreSQL.
+
 
 ### **Deployment**
 - **Render**: Utilizado para desplegar tanto el Frontend como el Backend.
