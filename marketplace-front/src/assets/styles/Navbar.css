@@ -1,0 +1,72 @@
+/* src/assets/styles/Navbar.css */
+.container-fluid {
+  background-color: #ffffff;
+
+}
+
+.navbar {
+  padding: 0%;
+  position: fixed; /* Fija la navbar en la parte superior */
+  top: 0; /* Asegura que la navbar esté en la parte superior */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  z-index: 1000; /* Asegura que la navbar esté por encima de otros elementos */
+  box-shadow: 0 4px 2px -2px gray; /* Añade una sombra sutil para darle efecto de elevación */
+}
+
+.navbar-brand, .nav-link { 
+   color: #000000 !important; /* Color del texto a negro para todos los enlaces, incluyendo "MusaikaPlace" */
+}
+
+.navbar-brand:hover {
+  color: #49a370 !important; /* Color de los enlaces al pasar el mouse por encima */
+}
+
+.nav-link:hover {
+  color: #49a370 !important; /* Color de los enlaces al pasar el mouse por encima */
+}
+
+/* Para evitar que el contenido se superponga con la navbar fija */
+body {
+  padding-top: 60px; /* Ajusta según la altura de tu navbar */
+}
+
+/* Aumenta el tamaño del ícono del carrito al doble y agrega grosor */
+.shopping-cart-icon {
+  font-size: 40px;        /* Aumenta el tamaño al doble (24px x 2 = 48px) */
+  stroke-width: 4px;      /* Engrosa el ícono (opcional, no todos los íconos lo soportan) */
+  color: #000000;         /* Color del ícono */
+  margin-left: 40px;
+}
+
+.shopping-cart-icon:hover {
+  color: #49a370;         /* Cambia el color cuando el mouse pasa */
+}
+
+/* Estilos para los enlaces del navbar */
+.navbar-brand, .nav-link {
+  font-weight: 600;        /* Engrosa el texto */
+  font-size: 18px;         /* Ajusta el tamaño de la fuente */
+  transition: color 0.3s ease; /* Suaviza la transición del color */
+}
+
+.navbar-brand {
+  font-weight: 700;        /* Engrosar el texto */
+  font-size: 25px;         /* Tamaño de la fuente */
+  transition: all 0.4s ease; /* Transición suave */
+}
+
+.carrito-container {
+  position: relative;
+}
+
+.carrito-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
