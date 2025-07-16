@@ -1,0 +1,7 @@
+{
+  "short_name": "Musaika",
+  "name": "Musaikaplace",
+  "start_url": ".",
+  "display": "standalone",
+  "icons": []
+}
