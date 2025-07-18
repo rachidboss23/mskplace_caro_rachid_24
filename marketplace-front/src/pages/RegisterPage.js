@@ -31,6 +31,7 @@ function RegisterPage() {
       console.error(error);
     }
   };
+console.log("API_URL en build:", API_URL);
 
   return (
     <div className="register-container"

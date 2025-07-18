@@ -1,4 +1,4 @@
-// routes/productRoutes.js
+// backend/routes/productRoutes.js
 const express = require('express');
 const pool = require('../config/db');
 const { verificarToken } = require('../middlewares/authMiddleware');
@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
     const result = await pool.query('SELECT * FROM publicaciones');
     res.json(result.rows);
   } catch (error) {
+    console.error('Error al obtener productos:', error);
     res.status(500).json({ mensaje: 'Error al obtener los productos' });
   }
 });
@@ -23,6 +24,7 @@ router.post('/', async (req, res) => {
     );
     res.status(201).json(result.rows[0]);
   } catch (error) {
+    console.error('Error al crear producto:', error);
     res.status(500).json({ mensaje: 'Error al crear el producto' });
   }
 });
@@ -39,6 +41,7 @@ router.delete('/:id', verificarToken, async (req, res) => {
 
     res.json({ mensaje: 'Producto eliminado con éxito', producto: result.rows[0] });
   } catch (error) {
+    console.error('Error al eliminar producto:', error);
     res.status(500).json({ mensaje: 'Error al eliminar el producto' });
   }
 });
