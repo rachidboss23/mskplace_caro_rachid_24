@@ -1,7 +1,10 @@
 {
-  "short_name": "Musaika",
+  "short_name": "Musaikaplace",
   "name": "Musaikaplace",
   "start_url": ".",
   "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "description": "Marketplace FullStack",
   "icons": []
 }

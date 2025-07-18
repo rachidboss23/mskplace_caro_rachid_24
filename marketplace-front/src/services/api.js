@@ -1,9 +1,9 @@
 // src/services/api.js
-
 import axios from 'axios';
 
+// HARDCODEAR aquí
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: "https://mskplace-caro-rachid-24-1.onrender.com/api"
 });
 
 export const obtenerProductos = async () => {
@@ -15,5 +15,3 @@ export const obtenerProductos = async () => {
     throw error;
   }
 };
-
-export default api;

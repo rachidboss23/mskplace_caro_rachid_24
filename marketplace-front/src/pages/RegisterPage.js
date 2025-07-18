@@ -12,7 +12,7 @@ function RegisterPage() {
   const [error, setError] = useState('');
 
   // ✅ CORRECTO: Llama a la API BASE de .env
-  const API_URL = process.env.REACT_APP_API_URL;
+  const API_URL = "https://mskplace-caro-rachid-24-1.onrender.com/api";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,7 +21,7 @@ function RegisterPage() {
 
     try {
       const nuevoUsuario = { email, password, nombre };
-      await axios.post(`${API_URL}/register`, nuevoUsuario);
+      await axios.post(`${API_URL}/usuarios/register`, nuevoUsuario);
       setMensaje('Usuario registrado exitosamente');
       setEmail('');
       setPassword('');
