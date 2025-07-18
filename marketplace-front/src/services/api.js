@@ -13,3 +13,4 @@ export const obtenerProductos = async () => {
     throw error;
   }
 };
+

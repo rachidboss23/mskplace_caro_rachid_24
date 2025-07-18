@@ -1,5 +1,3 @@
-// src/pages/RegisterPage.js
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../assets/styles/RegisterPage.css';
@@ -11,10 +9,8 @@ function RegisterPage() {
   const [mensaje, setMensaje] = useState('');
   const [error, setError] = useState('');
 
-  // ✅ CORRECTO: Llama a la API BASE de .env
+  // ✅ HARDCODE: SOLO Render, SIN localhost
   const API_URL = "https://mskplace-caro-rachid-24-1.onrender.com/api";
-
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,8 +19,7 @@ function RegisterPage() {
 
     try {
       const nuevoUsuario = { email, password, nombre };
-      await axios.post(`${API_URL}/register`, nuevoUsuario);
-
+      await axios.post(`${API_URL}/registro`, nuevoUsuario);
       setMensaje('Usuario registrado exitosamente');
       setEmail('');
       setPassword('');
@@ -34,10 +29,10 @@ function RegisterPage() {
       console.error(error);
     }
   };
-console.log("API_URL en build:", API_URL);
 
   return (
-    <div className="register-container"
+    <div
+      className="register-container"
       style={{
         backgroundImage: `url(${process.env.PUBLIC_URL + '/images/fondo2.jpg'})`,
         backgroundSize: 'cover',
@@ -84,7 +79,9 @@ console.log("API_URL en build:", API_URL);
           {error && <p className="error-message">{error}</p>}
           {mensaje && <p className="success-message">{mensaje}</p>}
 
-          <button type="submit" className="register-button">Registrar</button>
+          <button type="submit" className="register-button">
+            Registrar
+          </button>
         </form>
       </div>
     </div>
