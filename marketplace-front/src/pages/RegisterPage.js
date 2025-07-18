@@ -15,6 +15,7 @@ function RegisterPage() {
   const API_URL = "https://mskplace-caro-rachid-24-1.onrender.com/api";
 
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
@@ -22,7 +23,8 @@ function RegisterPage() {
 
     try {
       const nuevoUsuario = { email, password, nombre };
-      await axios.post(`${API_URL}/usuarios/register`, nuevoUsuario);
+      await axios.post(`${API_URL}/register`, nuevoUsuario);
+
       setMensaje('Usuario registrado exitosamente');
       setEmail('');
       setPassword('');
