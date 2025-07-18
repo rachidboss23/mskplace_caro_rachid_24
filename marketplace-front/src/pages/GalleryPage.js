@@ -14,7 +14,7 @@ function GalleryPage() {
 
   const obtenerProductosBackend = async () => {
     try {
-      const respuesta = await axios.get('http://localhost:5001/api/products');
+      const respuesta = await axios.get('https://mskplace-caro-rachid-24-1.onrender.com/api/products');
       setProductosBackend(respuesta.data);
     } catch (error) {
       console.error('Error al cargar productos del backend:', error);
@@ -42,7 +42,8 @@ function GalleryPage() {
 
     if (window.confirm('¿Estás seguro de que deseas eliminar este producto?')) {
       try {
-        const response = await axios.delete(`http://localhost:5001/api/products/${id}`, {
+        const response = await axios.delete(`https://mskplace-caro-rachid-24-1.onrender.com/api/products/${id}`, {
+
           headers: {
             Authorization: `Bearer ${token}`
           }

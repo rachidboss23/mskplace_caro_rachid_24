@@ -14,6 +14,7 @@ function RegisterPage() {
   // ✅ CORRECTO: Llama a la API BASE de .env
   const API_URL = "https://mskplace-caro-rachid-24-1.onrender.com/api";
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');

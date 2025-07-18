@@ -1,7 +1,5 @@
-// src/services/api.js
 import axios from 'axios';
 
-// HARDCODEAR aquí
 const api = axios.create({
   baseURL: "https://mskplace-caro-rachid-24-1.onrender.com/api"
 });

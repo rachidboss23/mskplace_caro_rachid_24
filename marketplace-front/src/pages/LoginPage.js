@@ -21,7 +21,8 @@ function LoginPage() {
     }
 
     try {
-      const response = await axios.post('http://localhost:5001/api/usuarios/login', { email, password });
+      const response = await axios.post('https://mskplace-caro-rachid-24-1.onrender.com/api/usuarios/login', { email, password });
+
 
       if (response.data.token) {
         // Almacenar el token JWT en localStorage

@@ -14,7 +14,7 @@ function CreatePostPage() {
 
     try {
       const nuevoProducto = { titulo, descripcion, precio };
-      await axios.post('http://localhost:5001/api/products', nuevoProducto);
+      await axios.post('https://mskplace-caro-rachid-24-1.onrender.com/api/products', nuevoProducto);
       setMensaje('Producto creado exitosamente');
       setTitulo('');
       setDescripcion('');
