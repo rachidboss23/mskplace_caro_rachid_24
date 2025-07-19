@@ -9,8 +9,7 @@ function RegisterPage() {
   const [mensaje, setMensaje] = useState('');
   const [error, setError] = useState('');
 
-  // ✅ HARDCODE: SOLO Render, SIN localhost
-  const API_URL = "https://mskplace-caro-rachid-24-1.onrender.com/api";
+  const API_URL = process.env.REACT_APP_API_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();

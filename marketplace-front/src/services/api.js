@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "https://mskplace-caro-rachid-24-1.onrender.com/api"
+  baseURL: process.env.REACT_APP_API_URL
 });
 
 export const obtenerProductos = async () => {
@@ -13,4 +13,3 @@ export const obtenerProductos = async () => {
     throw error;
   }
 };
-
