@@ -19,7 +19,7 @@ function RegisterPage() {
 
     try {
       const nuevoUsuario = { email, password, nombre };
-      await axios.post(`${API_URL}/registro`, nuevoUsuario);
+      await axios.post(`${API_URL}/usuarios/registro`, nuevoUsuario);
       setMensaje('Usuario registrado exitosamente');
       setEmail('');
       setPassword('');
