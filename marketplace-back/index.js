@@ -8,6 +8,7 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
 
+
 // ✅ CORS CORRECTO: Render + Localhost + GitHub Pages
 const allowedOrigins = [
   'https://mskplace-caro-rachid-24-1.onrender.com',
