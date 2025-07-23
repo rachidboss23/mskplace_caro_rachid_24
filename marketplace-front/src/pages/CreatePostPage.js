@@ -1,7 +1,6 @@
-// src/pages/CreatePostPage.js
-
+// ✅ CreatePostPage.js
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../services/api'; // ✅ Usa api.js
 import '../assets/styles/CreatePostPage.css';
 
 function CreatePostPage() {
@@ -11,8 +10,6 @@ function CreatePostPage() {
   const [mensaje, setMensaje] = useState('');
   const [error, setError] = useState('');
 
-  const API_URL = "https://mskplace-caro-rachid-24-1.onrender.com/api";
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
@@ -20,7 +17,7 @@ function CreatePostPage() {
 
     try {
       const nuevoProducto = { titulo, descripcion, precio };
-      await axios.post(`${API_URL}/products`, nuevoProducto);
+      await api.post('/products', nuevoProducto);
       setMensaje('Producto creado exitosamente');
       setTitulo('');
       setDescripcion('');

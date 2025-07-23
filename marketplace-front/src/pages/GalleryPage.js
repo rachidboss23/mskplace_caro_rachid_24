@@ -1,19 +1,16 @@
-// src/pages/GalleryPage.js
-
+// ✅ GalleryPage.js
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../services/api'; // ✅ Usa api.js
 import '../assets/styles/GalleryPage.css';
 
 function GalleryPage() {
   const [productos, setProductos] = useState([]);
   const [error, setError] = useState('');
 
-  const API_URL = "https://mskplace-caro-rachid-24-1.onrender.com/api";
-
   useEffect(() => {
     const fetchProductos = async () => {
       try {
-        const respuesta = await axios.get(`${API_URL}/products`);
+        const respuesta = await api.get('/products');
         setProductos(respuesta.data);
       } catch (error) {
         setError('Error al cargar productos');
@@ -25,7 +22,7 @@ function GalleryPage() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${API_URL}/products/${id}`);
+      await api.delete(`/products/${id}`);
       setProductos(productos.filter(p => p.id !== id));
     } catch (error) {
       console.error(error);
