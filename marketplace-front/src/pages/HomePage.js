@@ -1,21 +1,21 @@
-// src/pages/HomePage.js
+// ✅ marketplace-front/src/pages/HomePage.js limpio — sin obtenerProductos
+
 import React, { useContext, useEffect, useState } from 'react';
 import '../assets/styles/HomePage.css';
-import { ProductContext } from '../context/ProductProvider'; // Contexto de productos
-import { obtenerProductos } from '../services/api';  // Función para obtener productos desde el backend
-import { useNavigate } from 'react-router-dom';  // Para navegar a la vista de detalle
+import { ProductContext } from '../context/ProductProvider';
+import api from '../services/api'; // ✅ Usa instancia api.js
+import { useNavigate } from 'react-router-dom';
 
 function HomePage() {
-  const { productos: productosContext, addCarrito } = useContext(ProductContext); // Obtener productos del contexto y carrito
-  const [productosBackend, setProductosBackend] = useState([]);  // Productos desde el backend
-  const navigate = useNavigate();  // Para redirigir a detalle
+  const { productos: productosContext, addCarrito } = useContext(ProductContext);
+  const [productosBackend, setProductosBackend] = useState([]);
+  const navigate = useNavigate();
 
-  // Cargar productos desde el backend
   useEffect(() => {
     const cargarProductos = async () => {
       try {
-        const productosApi = await obtenerProductos();
-        setProductosBackend(productosApi);  // Guardar productos en el estado
+        const res = await api.get('/products');
+        setProductosBackend(res.data);
       } catch (error) {
         console.error('Error al cargar productos desde el backend:', error);
       }
@@ -24,13 +24,11 @@ function HomePage() {
     cargarProductos();
   }, []);
 
-  // Usar productos del contexto si están disponibles, de lo contrario usar productos del backend
   const productosAMostrar = productosContext.length > 0 ? productosContext : productosBackend;
-  const primerasCuatroCards = productosAMostrar.slice(0, 4);  // Mostrar solo las primeras 4 cards
+  const primerasCuatroCards = productosAMostrar.slice(0, 4);
 
   return (
     <div className="home-container">
-      {/* Logo principal debajo del Navbar */}
       <div className="logo-container">
         <img 
           src="/images/Logoprincipal.jpg" 
@@ -39,7 +37,6 @@ function HomePage() {
         />
       </div>
 
-      {/* Texto en la parte superior */}
       <div className="top-text">
         <p>
           Bienvenid@s a un espacio diseñado para transformar la educación.
@@ -51,14 +48,12 @@ function HomePage() {
         </p>
       </div>
 
-      {/* Contenedor para las 3 imágenes de publicidad */}
       <div className="images-row">
         <img src="/images/publicidad01.jpg" alt="Publicidad 1" className="home-image" />
         <img src="/images/publicidad02.jpg" alt="Publicidad 2" className="home-image" />
         <img src="/images/publicidad03.jpg" alt="Publicidad 3" className="home-image" />
       </div>
 
-      {/* Texto adicional en cursiva */}
       <div className="middle-section">
         <p>
           <i>
@@ -68,7 +63,6 @@ function HomePage() {
         </p>
       </div>
 
-      {/* Mostrar productos */}
       <div className="card-container">
         {primerasCuatroCards.length > 0 ? (
           primerasCuatroCards.map((producto) => (

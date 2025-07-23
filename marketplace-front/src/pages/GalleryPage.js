@@ -1,6 +1,7 @@
-// ✅ GalleryPage.js
+// ✅ marketplace-front/src/pages/GalleryPage.js (sin obtenerProductos)
+
 import React, { useEffect, useState } from 'react';
-import api from '../services/api'; // ✅ Usa api.js
+import api from '../services/api';
 import '../assets/styles/GalleryPage.css';
 
 function GalleryPage() {

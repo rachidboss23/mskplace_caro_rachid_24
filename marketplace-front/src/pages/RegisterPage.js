@@ -1,6 +1,6 @@
-// ✅ RegisterPage.js
+// ✅ marketplace-front/src/pages/RegisterPage.js
 import React, { useState } from 'react';
-import api from '../services/api'; // ⚠️ Usa tu instancia, NO axios directo
+import api from '../services/api';
 import '../assets/styles/RegisterPage.css';
 
 function RegisterPage() {
@@ -17,7 +17,7 @@ function RegisterPage() {
 
     try {
       const nuevoUsuario = { email, password, nombre };
-      await api.post('/usuarios/registro', nuevoUsuario); // ✅ Usa api.js
+      await api.post('/usuarios/registro', nuevoUsuario);
       setMensaje('Usuario registrado exitosamente');
       setEmail('');
       setPassword('');
@@ -29,12 +29,14 @@ function RegisterPage() {
   };
 
   return (
-    <div className="register-container"
+    <div
+      className="register-container"
       style={{
         backgroundImage: `url(${process.env.PUBLIC_URL + '/images/fondo2.jpg'})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-      }}>
+      }}
+    >
       <div className="register-box">
         <h1>Registro de Usuario</h1>
         <form onSubmit={handleSubmit}>
