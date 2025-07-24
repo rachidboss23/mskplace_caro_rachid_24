@@ -1,4 +1,4 @@
-// ✅ marketplace-front/src/pages/CreatePostPage.js
+// ✅ pages/CreatePostPage.js
 import React, { useState } from 'react';
 import api from '../services/api';
 import '../assets/styles/CreatePostPage.css';

@@ -1,9 +1,8 @@
-// ✅ marketplace-front/src/pages/HomePage.js limpio — sin obtenerProductos
-
+// ✅ pages/HomePage.js
 import React, { useContext, useEffect, useState } from 'react';
 import '../assets/styles/HomePage.css';
 import { ProductContext } from '../context/ProductProvider';
-import api from '../services/api'; // ✅ Usa instancia api.js
+import api from '../services/api';
 import { useNavigate } from 'react-router-dom';
 
 function HomePage() {
@@ -20,7 +19,6 @@ function HomePage() {
         console.error('Error al cargar productos desde el backend:', error);
       }
     };
-
     cargarProductos();
   }, []);
 
@@ -30,22 +28,11 @@ function HomePage() {
   return (
     <div className="home-container">
       <div className="logo-container">
-        <img 
-          src="/images/Logoprincipal.jpg" 
-          alt="Logo principal" 
-          className="logo-image"
-        />
+        <img src="/images/Logoprincipal.jpg" alt="Logo principal" className="logo-image" />
       </div>
 
       <div className="top-text">
-        <p>
-          Bienvenid@s a un espacio diseñado para transformar la educación.
-          Aquí podrás tomar y vender cursos con metodologías innovadoras de 
-          aprendizaje, entregando a tus estudiantes habilidades y competencias 
-          para la vida. ¡Atrévete a crear tu curso y sé parte de nuestra comunidad 
-          coeducativa comprometida con la infancia y juventud! Musaika "Innovación educativa 
-          hoy, para la ética del mañana".
-        </p>
+        <p>Bienvenid@s a un espacio diseñado para transformar la educación. Aquí podrás tomar y vender cursos con metodologías innovadoras de aprendizaje.</p>
       </div>
 
       <div className="images-row">
@@ -55,12 +42,7 @@ function HomePage() {
       </div>
 
       <div className="middle-section">
-        <p>
-          <i>
-            Si eres profesor certificado o quieres ofrecer cursos innovadores, este es tu espacio.
-            Aquí algunos de nuestros cursos:
-          </i>
-        </p>
+        <p><i>Si eres profesor certificado o quieres ofrecer cursos innovadores, este es tu espacio.</i></p>
       </div>
 
       <div className="card-container">
@@ -72,12 +54,8 @@ function HomePage() {
                 <h5>{producto.name}</h5>
                 <p>{producto.desc}</p>
                 <p>${producto.price}</p>
-                <button className="btn btn-primary" onClick={() => navigate(`/detalle/${producto.id}`)}>
-                  Ver más
-                </button>
-                <button className="btn btn-success" onClick={() => addCarrito(producto)}>
-                  Agregar
-                </button>
+                <button className="btn btn-primary" onClick={() => navigate(`/detalle/${producto.id}`)}>Ver más</button>
+                <button className="btn btn-success" onClick={() => addCarrito(producto)}>Agregar</button>
               </div>
             </div>
           ))

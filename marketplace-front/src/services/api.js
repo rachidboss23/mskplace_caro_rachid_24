@@ -1,4 +1,4 @@
-// ✅ marketplace-front/src/services/api.js
+// ✅ services/api.js
 import axios from 'axios';
 
 const api = axios.create({

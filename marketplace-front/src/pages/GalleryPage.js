@@ -1,5 +1,4 @@
-// ✅ marketplace-front/src/pages/GalleryPage.js (sin obtenerProductos)
-
+// ✅ pages/GalleryPage.js
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
 import '../assets/styles/GalleryPage.css';
@@ -11,8 +10,8 @@ function GalleryPage() {
   useEffect(() => {
     const fetchProductos = async () => {
       try {
-        const respuesta = await api.get('/products');
-        setProductos(respuesta.data);
+        const res = await api.get('/products');
+        setProductos(res.data);
       } catch (error) {
         setError('Error al cargar productos');
         console.error(error);

@@ -1,4 +1,4 @@
-// ✅ marketplace-front/src/pages/RegisterPage.js
+// ✅ pages/RegisterPage.js
 import React, { useState } from 'react';
 import api from '../services/api';
 import '../assets/styles/RegisterPage.css';
@@ -29,32 +29,16 @@ function RegisterPage() {
   };
 
   return (
-    <div
-      className="register-container"
-      style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL + '/images/fondo2.jpg'})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
+    <div className="register-container" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/images/fondo2.jpg'})` }}>
       <div className="register-box">
         <h1>Registro de Usuario</h1>
         <form onSubmit={handleSubmit}>
-          <div className="input-group">
-            <label>Nombre</label>
-            <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder="Ingresa tu nombre" className="input-field" required />
-          </div>
-          <div className="input-group">
-            <label>Email</label>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Ingresa tu email" className="input-field" required />
-          </div>
-          <div className="input-group">
-            <label>Contraseña</label>
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Ingresa tu contraseña" className="input-field" required />
-          </div>
+          <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder="Nombre" required />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Contraseña" required />
           {error && <p className="error-message">{error}</p>}
           {mensaje && <p className="success-message">{mensaje}</p>}
-          <button type="submit" className="register-button">Registrar</button>
+          <button type="submit">Registrar</button>
         </form>
       </div>
     </div>
