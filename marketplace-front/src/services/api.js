@@ -1,8 +1,8 @@
-// ✅ services/api.js
+// ✅ marketplace-front/src/services/api.js
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: "https://mskplace-caro-rachid-2024.onrender.com/api",
   withCredentials: true
 });
 
