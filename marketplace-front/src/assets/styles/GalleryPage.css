@@ -12,6 +12,22 @@
   gap: 20px; /* Espacio entre cards */
 }
 
+@media (max-width: 768px) {
+  .gallery-grid {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .card {
+    width: 90% !important;
+    min-width: 220px;
+    max-width: 400px;
+  }
+  .card-img-top {
+    height: 160px;
+  }
+}
+
 .card {
   background-color: #fff;
   border: 1px solid #ddd;

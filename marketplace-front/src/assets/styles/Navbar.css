@@ -13,6 +13,37 @@
   box-shadow: 0 4px 2px -2px gray; /* Añade una sombra sutil para darle efecto de elevación */
 }
 
+/* Asegura que el botón hamburguesa sea visible en mobile */
+.navbar-toggler {
+  display: block !important;
+  border: none;
+  background: transparent;
+  font-size: 1.8rem;
+  margin-right: 10px;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    padding: 1rem 0;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 1rem;
+  }
+  .navbar-toggler {
+    display: block !important;
+  }
+}
+
 .navbar-brand, .nav-link { 
    color: #000000 !important; /* Color del texto a negro para todos los enlaces, incluyendo "MusaikaPlace" */
 }
