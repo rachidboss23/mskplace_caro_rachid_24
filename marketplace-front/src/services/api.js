@@ -2,11 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL:
-    process.env.REACT_APP_API_URL ||
-    (process.env.NODE_ENV === 'production'
-      ? 'https://mskplace-caro-rachid-24-1.onrender.com/api'
-      : 'http://localhost:5001/api'),
+  baseURL: 'https://mskplace-caro-rachid-24-1.onrender.com/api',
 });
 
 export const obtenerProductos = async () => {
