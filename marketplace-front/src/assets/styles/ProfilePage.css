@@ -37,6 +37,8 @@
     gap: 10px;
   }
 }
+
+.profile-container {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para resaltar el contenido sobre el fondo */
   border-radius: 10px; /* Redondeamos los bordes */
 }
