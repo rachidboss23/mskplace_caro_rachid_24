@@ -4,6 +4,30 @@
   min-height: 100vh;
   background-image: url(/public/images/fondo1.jpg);
 
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    padding: 8px;
+    gap: 8px;
+  }
+  .sidebar-left {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+  .preview-and-info-section {
+    flex-direction: column;
+    margin: 10px;
+    gap: 8px;
+    padding: 8px;
+  }
+  .preview-left,
+  .teacher-info-right {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
 }
 
 .main-content {

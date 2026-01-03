@@ -14,8 +14,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30%; 
-  padding: 2%; 
+  width: 30%;
+  padding: 2%;
+}
+
+@media (max-width: 768px) {
+  .login-box {
+    width: 95% !important;
+    min-width: 220px;
+    max-width: 400px;
+    padding: 16px;
+  }
+}
   background-color: white;
   border-radius: 3%;
   row-gap: 4px;

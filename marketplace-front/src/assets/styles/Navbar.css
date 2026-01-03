@@ -25,11 +25,17 @@
 @media (max-width: 991px) {
   .navbar-collapse {
     background: #fff;
-    position: absolute;
-    top: 60px;
-    left: 0;
+    position: static;
     width: 100vw;
     z-index: 999;
+    box-shadow: none;
+    padding: 0;
+    transition: max-height 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .navbar-collapse.show {
+    max-height: 500px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.08);
     padding: 1rem 0;
   }

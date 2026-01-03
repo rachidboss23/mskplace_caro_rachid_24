@@ -5,6 +5,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 98vw;
+    padding: 10px;
+  }
+}
 }
 
 .empty-cart {
