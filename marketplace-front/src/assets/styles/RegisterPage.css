@@ -15,6 +15,26 @@
   align-items: center;
   width: 30%;
   padding: 2%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .register-box {
+    width: 98vw !important;
+    min-width: 220px;
+    max-width: 400px;
+    padding: 16px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  .input-group {
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+}
 }
 
 @media (max-width: 768px) {
