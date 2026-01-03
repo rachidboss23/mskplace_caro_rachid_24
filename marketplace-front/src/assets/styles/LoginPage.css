@@ -26,6 +26,8 @@
     padding: 16px;
   }
 }
+
+.login-box {
   background-color: white;
   border-radius: 3%;
   row-gap: 4px;
